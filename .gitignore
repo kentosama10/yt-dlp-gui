@@ -1,0 +1,15 @@
+# Ignore build directories and files
+dist/
+build/
+*.spec
+
+# Ignore icon files
+*.ico
+
+# Ignore log files
+*.log
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
