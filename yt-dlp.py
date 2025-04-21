@@ -5,8 +5,17 @@ import threading
 import customtkinter as ctk
 from tkinter import filedialog
 from tkinter import ttk
+import sys
 
 LOG_FILE = "download_history.log"
+
+def get_resource_path(filename):
+    if hasattr(sys, '_MEIPASS'):
+        # Running as an .exe
+        return os.path.join(sys._MEIPASS, filename)
+    else:
+        # Running as a script
+        return os.path.join(os.getcwd(), filename)
 
 class YTDLPDownloader(ctk.CTk):
     def __init__(self):
@@ -81,7 +90,7 @@ class YTDLPDownloader(ctk.CTk):
 
         self.status_var.set("⏳ Downloading...")
         output_template = os.path.join(self.output_dir, "%(title)s.%(ext)s")
-        cmd = ["yt-dlp", "--yes-playlist", "--no-mtime"] + self.build_format_string(fmt, quality) + ["-o", output_template, url]
+        cmd = [get_resource_path("yt-dlp.exe"), "--yes-playlist", "--no-mtime"] + self.build_format_string(fmt, quality) + ["-o", output_template, url]
 
         try:
             process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)

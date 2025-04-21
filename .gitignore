@@ -3,13 +3,12 @@ dist/
 build/
 *.spec
 
-# Ignore icon files
+# Include yt-dlp binary
+!yt-dlp.exe
+
+# Ignore other files
 *.ico
-
-# Ignore log files
 *.log
-
-# Ignore Python cache files
 __pycache__/
 *.pyc
 *.pyo
