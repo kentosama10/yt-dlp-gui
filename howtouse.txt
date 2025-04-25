@@ -1,0 +1,15 @@
+How to Use yt-dlp-gui:
+
+1. Open the application by running `yt-dlp.py`.
+
+2. Enter the YouTube video or playlist URL in the input box.
+
+3. Choose the format (e.g., MP4, MP3) and quality (e.g., 1080p, 720p, audio only) from the dropdown menus.
+
+4. Click "Select Output Directory" to choose where the downloaded files will be saved.
+
+5. Click "Download" to start downloading the video or playlist.
+
+6. To view your download history, click the "View Download History" button.
+
+Enjoy your downloads!
