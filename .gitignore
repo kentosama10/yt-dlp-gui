@@ -4,10 +4,6 @@ build/
 *.spec
 .exe
 
-# Include yt-dlp binary
-!yt-dlp.exe
-
-
 # Ignore other files
 *.ico
 *.log
